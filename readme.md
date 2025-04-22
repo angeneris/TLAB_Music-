@@ -1,25 +1,44 @@
-# TLAB Music
-# Unsupervised Music Recommendation Algorithm 🎶
+# 🎶 TLAB: Unsupervised Music Recommendation Algorithm 🎶
 
-This repository is dedicated to building a recommendation system that suggests new songs to users based on their listening history. This project is part of an initiative at our music platform start-up, which recently secured Series B financing.
+This repository presents an unsupervised learning pipeline designed to cluster songs by thematic content, enabling personalized music recommendations without relying on labeled user data. The goal is to enhance content delivery through scalable, intelligent user modeling.
 
-## Project Overview
+## 📊 Project Overview 
 
-The goal of this project is to develop an unsupervised learning algorithm using sklearn to cluster unlabeled music data. These clusters will serve as the foundation for recommending music to users. The project will be built from scratch and will include the following steps:
+This project implements an end-to-end clustering workflow using scikit-learn and real-world lyric data, following the typical stages of an unsupervised machine learning pipeline.
 
-1. **Initial EDA**: Explore the dataset to understand its structure and key characteristics
-2. **Data Preprocessing & Dimensionality Reduction**: Clean the data and reduce its dimensionality for efficient modeling
-3. **Unsupervised Modeling & Tuning**: Train and fine-tune clustering algorithms to generate meaningful clusters
-4. **Report**: Summarize findings and results.
-5. **(Optional Bonus Challenge)**: Perform Word2Vec analysis for deeper insights
+The objective is to cluster unlabeled songs based on lyrical themes, forming the basis of a recommendation system that can suggest music without prior user labels. The workflow includes:
 
-## Dataset
+### Exploratory Data Analysis (EDA) 
+- Evaluated theme distributions across songs
+- Checked for missing data and structural issues
+- Analyzed potential correlations between lyrical categories
+### Preprocessing & Scaling – to prepare thematic features for modeling
+- Standardized thematic variables using StandardScaler
+- Avoided dimensionality reduction (e.g., PCA) to preserve interpretability of theme clusters
+### Clustering & Evaluation – to group songs using KMeans and assess cluster quality
+- Used KMeans to identify natural groupings within the dataset
+- Optimized cluster count using:
+Elbow Method and Silhouette Score
+### Interpretation & Reporting – to analyze cluster traits and surface meaningful recommendations
+- Labeled and analyzed clusters based on theme prominence
+- Compared representative tracks per cluster to assess lyrical patterns (e.g: “Low-Obscene,” “Romantic,” etc.)
 
+
+
+## 🗂 Dataset
+
+Lyrically analyzed songs, each annotated with quantified scores for themes
+
+📥 Download the dataset
 [Music Dataset](https://drive.google.com/file/d/1oGoUawIeH--KED4sB2MFyzBq90GppNnG/view?usp=sharing).
 
 ### Correlation Heat Map based on Thematic Colunns 
-- The current data does not show any strong correkations between any song themes, positie or negative relarionshop. 
+🔗 Correlation Analysis
+
+A heatmap visualization was used to assess potential multicollinearity between themes. 
 ![alt text](image.png)
+Result: No strong correlations—positive or negative—were found among the thematic categories. This supports the clustering approach, as songs are not easily grouped by simple co-occurrence of lyrical traits.
+
 
 ### Top Song Genres 
 ![alt text](image-1.png)
