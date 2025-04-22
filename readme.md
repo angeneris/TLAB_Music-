@@ -17,25 +17,12 @@ The goal of this project is to develop an unsupervised learning algorithm using 
 
 [Music Dataset](https://drive.google.com/file/d/1oGoUawIeH--KED4sB2MFyzBq90GppNnG/view?usp=sharing).
 
-## Folder Structure
+### Correlation Heat Map based on Thematic Colunns 
+- The current data does not show any strong correkations between any song themes, positie or negative relarionshop. 
+![alt text](image.png)
 
-```
-/Music_TLAB/
-    ├── TLAB_Music-/
-    │       ├── readme.md
-    │       ├── data/
-    │       │       └── music_dataset.csv
-    │       ├── notebooks/
-    │       │       ├── 01_eda.ipynb
-    │       │       ├── 02_preprocessing.ipynb
-    │       │       ├── 03_modeling.ipynb
-    │       │       └── 04_report.ipynb
-    │       └── src/
-    │               ├── preprocessing.py
-    │               ├── clustering.py
-    │               └── utils.py
-```
-
+### Top Song Genres 
+![alt text](image-1.png)
 ---
 🎶
 
